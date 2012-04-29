@@ -1,0 +1,10 @@
+{ "name"   : "thaijs"
+, "private": true
+, "version": "0.1.0"
+, "description": "thaijs.com web site builder"
+, "author": { "name": "Jason Smith" , "email": "jhs@iriscouch.com" }
+, "engines": [ "node" ]
+
+, "dependencies": { "static-plus": "~0.2.4"
+                  }
+}
