@@ -16,7 +16,7 @@ while true; do
   static+ --log=debug                                           \
           "https://jhs:$pw@jhs.iriscouch.com" thaijs thaijs.com \
           --prefix='' --staging-prefix='st.'                    \
-          --seed="$PWD/seed"                                    \
+          --seed="$PWD/seed" --publish="$PWD/publish"           \
           --watch
 
   sleep 1
