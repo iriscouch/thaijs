@@ -25,6 +25,7 @@ while true; do
           --seed="$PWD/seed" --publish="$PWD/publish"           \
           --watch
 
+  echo "Restart"
   sleep 1
 done
 
