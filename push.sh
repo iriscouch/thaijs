@@ -1,6 +1,26 @@
-#!/usr/bin/env node
-//
-// Push the thaijs.com site.
+#!/bin/bash
+#
+# Push the thaijs.com site.
+
+if ! which static+ ; then
+  echo "Static+ not installed. Try npm -g install static-plus"
+  exit 1
+fi
+
+if [ -z "$pw" ]; then
+  read -s -p "CouchDB password: " pw
+  echo
+fi
+
+while true; do
+  static+ --log=debug                                           \
+          "https://jhs:$pw@jhs.iriscouch.com" thaijs thaijs.com \
+          --prefix='' --staging-prefix='st.'                    \
+          --seed="$PWD/seed"                                    \
+          --watch
+
+  sleep 1
+done
 
 var fs = require('fs')
 var SP = require('static-plus')
